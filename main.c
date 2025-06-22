@@ -14,11 +14,11 @@ int main() {
     int maxAvg = 0;
 
     for (int i = 0; i < 5; i++) {
-        printf("Student %i name: ", i + 1);
+        //printf("Student %i name: ", i + 1);
         scanf("%s", students[i].name);
         
         for (int j = 0; j < 13; j++) {
-            printf("Student %i testscore %i: ", i + 1, j + 1);
+            //printf("Student %i testscore %i: ", i + 1, j + 1);
             scanf("%i", &students[i].testScores[j]);
             students[i].avg += students[i].testScores[j];
         }
