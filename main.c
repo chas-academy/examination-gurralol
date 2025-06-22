@@ -14,7 +14,7 @@ int main() {
     int maxAvg = 0;
 
     for (int i = 0; i < 5; i++) {
-        students[i].avg = 0;
+        students[i].avg = 0.0;
         scanf("%s", students[i].name);
         
         for (int j = 0; j < 13; j++) {
@@ -32,7 +32,7 @@ int main() {
         avgTotal += students[i].avg;
     }
 
-    avgTotal = avgTotal / 13;
+    avgTotal = avgTotal / 5;
 
     //printf("Student with highest average: %s", students[maxAvg].name);
     students[maxAvg].name[0] = toupper(students[maxAvg].name[0]);
