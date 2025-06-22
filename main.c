@@ -36,6 +36,8 @@ int main() {
         avgTotal += students[i].avg;
     }
 
+    avgTotal = avgTotal / 13;
+
     //printf("Student with highest average: %s", students[maxAvg].name);
     printf("%s\n", students[maxAvg].name);
 
