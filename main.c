@@ -14,21 +14,17 @@ int main() {
     int maxAvg = 0;
 
     for (int i = 0; i < 5; i++) {
-        //printf("Student %i name: ", i + 1);
         students[i].avg = 0;
         scanf("%s", students[i].name);
         
         for (int j = 0; j < 13; j++) {
-            //printf("Student %i testscore %i: ", i + 1, j + 1);
             scanf("%i", &students[i].testScores[j]);
             students[i].avg += students[i].testScores[j];
         }
         students[i].avg = students[i].avg / 13;
 
-        if (i != 0) {
-            if (students[i].avg > students[maxAvg].avg) {
-                maxAvg = i;
-            }
+        if (i == 0 || students[i].avg > students[maxAvg].avg) {
+            maxAvg = i;
         }
     }
 
@@ -39,11 +35,13 @@ int main() {
     avgTotal = avgTotal / 13;
 
     //printf("Student with highest average: %s", students[maxAvg].name);
+    students[maxAvg].name[0] = toupper(students[maxAvg].name[0]);
     printf("%s\n", students[maxAvg].name);
 
     //printf("Students with lower average than total average: \n");
     for (int i = 0; i < 5; i++) {
         if (students[i].avg < avgTotal) {
+            students[i].name[0] = toupper(students[i].name[0]);
             printf("%s\n", students[i].name);
         }
     }
