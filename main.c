@@ -15,6 +15,7 @@ int main() {
 
     for (int i = 0; i < 5; i++) {
         //printf("Student %i name: ", i + 1);
+        students[i].avg = 0;
         scanf("%s", students[i].name);
         
         for (int j = 0; j < 13; j++) {
@@ -26,7 +27,7 @@ int main() {
 
         if (i != 0) {
             if (students[i].avg > students[maxAvg].avg) {
-                maxAvg += 1;
+                maxAvg = 1;
             }
         }
     }
