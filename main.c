@@ -37,7 +37,7 @@ int main() {
     }
 
     //printf("Student with highest average: %s", students[maxAvg].name);
-    printf("%s", students[maxAvg].name);
+    printf("%s\n", students[maxAvg].name);
 
     //printf("Students with lower average than total average: \n");
     for (int i = 0; i < 5; i++) {
