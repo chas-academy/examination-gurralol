@@ -27,7 +27,7 @@ int main() {
 
         if (i != 0) {
             if (students[i].avg > students[maxAvg].avg) {
-                maxAvg = 1;
+                maxAvg = i;
             }
         }
     }
